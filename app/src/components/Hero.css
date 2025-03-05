@@ -1,0 +1,14 @@
+#heroBanner{
+    background-color: rgb(43, 43, 43);
+    padding: 10px;
+}
+
+h1{
+    color:rgb(98, 241, 93);
+    text-transform: uppercase;
+}
+
+h2{
+    color:rgba(255, 255, 255, 0.808);
+    text-transform: uppercase;
+}
