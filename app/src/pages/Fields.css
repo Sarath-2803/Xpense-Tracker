@@ -1,3 +1,24 @@
+#container{
+    border:1px solid rgba(0, 0, 0, 0.582);
+    margin: 20px auto;
+    min-width:300px;
+    max-width:500px;
+    padding-bottom: 20px;
+}
+#fieldDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:15px;
+}
+input{
+    min-width:250px;
+    max-width:600px;
+    height:20px;
+    margin-bottom: 10px;
+}
+
 #buttonDiv{
     display: flex;
     justify-content: center;
@@ -24,3 +45,24 @@
 #finishBtn:hover{
     background-color: rgb(83, 83, 83);
 }   
+
+#fieldInputBtn{
+    display:flex;
+    aligh-items:center;
+    justify-content: center;
+}
+#deleteBtn{
+    width:25px;
+    height:25px;
+    background-color: rgba(124, 124, 124, 0.185);
+    color:red;
+    margin-top:0;
+    border:none;
+    margin-left:10px;
+
+}
+
+#deleteBtn:hover{
+    background-color: rgba(255, 0, 0, 0.767);
+    color:black;
+}

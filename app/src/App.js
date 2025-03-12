@@ -6,6 +6,7 @@ import { Link, useLocation } from 'react-router-dom';
 import LinkButton from './components/LinkButton';
 import Hero from './components/Hero';
 import Fields from './pages/Fields';
+import SignUp from './pages/SignUp';
 
 function App() {
   const location=useLocation();
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <Header />
+      <SignUp />
       {location.pathname === '/' && <Hero />}
       {location.pathname === '/' && <LinkButton text='Track Expense' linkto='/tracker'/>}
       {location.pathname === '/' && <Link to="/Fields">fields</Link>}

@@ -1,0 +1,19 @@
+#msgDiv{
+    border:1px solid rgb(255, 0, 0);
+    min-width:200px;
+    z-index:999;
+    position:fixed;
+    width:80%;
+    height:30%;
+    text-align: center;
+    justify-content: center;
+    margin: 10px auto;
+    align-items: center;
+    background-color: rgba(87, 87, 87, 0.808);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+#msgDiv.show {
+    opacity: 1;
+}
