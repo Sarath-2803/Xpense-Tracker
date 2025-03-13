@@ -1,12 +1,17 @@
 import React, { useState } from 'react';
 import { auth } from '../Firebase/Auth';
-
 import { createUserWithEmailAndPassword } from 'firebase/auth';
+import './SignUp.css';
+import Button from '../components/Button';
 
 const SignUp = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
+
+  const loginfun = () => {
+    window.location.href = '/login';
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -19,10 +24,10 @@ const SignUp = () => {
   };
 
   return (
-    <div>
+    <div id='conatiner'>
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className='inputDiv'>
           <label>Email:</label>
           <input
             type="email"
@@ -31,7 +36,7 @@ const SignUp = () => {
             required
           />
         </div>
-        <div>
+        <div className='inputDiv'>
           <label>Password:</label>
           <input
             type="password"
@@ -41,6 +46,8 @@ const SignUp = () => {
           />
         </div>
         <button type="submit">Sign Up</button>
+        <p>or</p>
+        <Button text='Login' id='loginBtn' onClick={loginfun}/>
       </form>
       {error && <p>{error}</p>}
     </div>
