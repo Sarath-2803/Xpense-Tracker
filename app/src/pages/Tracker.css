@@ -1,4 +1,25 @@
+#expenseContainer{
+    min-width:100px;
+    max-width:400px;
+    border:1px solid #ccc;
+    margin:50px auto;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
 
-#labelInput{
+#expenseDiv{
     display: flex;
+    width:70%;
+    min-width:100px;
+    max-width:400px;
+    margin: 0 auto;
+}
+label{
+    margin-right: 10px;
+}
+input{
+    width:100%;
+    min-width: 90px;
 }

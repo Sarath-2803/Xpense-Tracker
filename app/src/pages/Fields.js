@@ -26,12 +26,12 @@ const Fields = () => {
         const docSnap = await getDoc(docRef);
         if(docSnap.exists()){
           setUserFields(docSnap.data());
-//          console.log(docSnap.data());
+          console.log(docSnap.data());
         }
         else{
           console.log('No such document!');
         }
-      } else {
+       } else {
         console.log('No user is signed in.');
       }
     });
@@ -58,8 +58,9 @@ const Fields = () => {
       const docId= userEmail;
       await setDoc(doc(collection(db, 'fields'), docId), FieldsValues);
       //<DisplayMsg message='Fields added successfully!' trigger='1'/>
-      alert('Fieldss added successfully!');
-      navigate('/Tracker'); 
+     alert('Fieldss added successfully!');
+      //console.log('UserFields');
+      navigate('/Tracker',{state:{UserFields:FieldsValues}}); 
     } catch (e) {
       console.error('Error adding document: ', e);
     }
